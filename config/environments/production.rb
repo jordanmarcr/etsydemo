@@ -22,7 +22,7 @@ Rails.application.configure do
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY_ID'],
     },
-    :s3_region => 'us-east-2'
+    :s3_region => 'us-east-1'
   }
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
