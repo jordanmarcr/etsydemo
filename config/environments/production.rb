@@ -18,10 +18,11 @@ Rails.application.configure do
     :storage => :s3,
     :preserve_files => true,
     :s3_credentials => {
+      :bucket => 'etsydemo-2019',
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY_ID'],
     },
-    :bucket => 'etsydemo-2019'
+    :s3_region => 'us-east-2'
   }
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]

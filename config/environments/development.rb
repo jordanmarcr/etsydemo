@@ -28,15 +28,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
-    :s3_credentials => {
-      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY_ID'],
-    },
-    :bucket => 'etsydemo-2019'
-  }
+
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
