@@ -23,7 +23,7 @@ Rails.application.configure do
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY_ID'],
       :s3_region => ENV['AWS_REGION'],
-      :s3_host_name: ENV["S3_HOST_NAME"]
+      :s3_host_name => ENV["S3_HOST_NAME"]
     },
   }
 
