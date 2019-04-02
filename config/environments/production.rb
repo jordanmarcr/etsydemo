@@ -18,8 +18,8 @@ Rails.application.configure do
     :storage => :s3,
     :preserve_files => true,
     :s3_credentials => {
-      :access_key_id => AWS_ACCESS_KEY_ID,
-      :secret_access_key => AWS_SECRET_ACCESS_KEY,
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY_ID'],
     },
     :bucket => 'etsydemo-2019'
   }

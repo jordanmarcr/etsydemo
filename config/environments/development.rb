@@ -32,8 +32,8 @@ Rails.application.configure do
     :storage => :s3,
     :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
     :s3_credentials => {
-      :access_key_id => AWS_ACCESS_KEY_ID,
-      :secret_access_key => AWS_SECRET_ACCESS_KEY,
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY_ID'],
     },
     :bucket => 'etsydemo-2019'
   }
