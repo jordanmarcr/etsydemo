@@ -14,6 +14,8 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+  config.serve_static_assets = true # default is false
+
   config.paperclip_defaults = {
     :storage => :s3,
     :preserve_files => true,
