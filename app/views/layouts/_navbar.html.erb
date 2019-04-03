@@ -14,7 +14,8 @@
     </ul>
     <ul class="navbar-nav navbar-right">
       <% if current_user %>
-        <li class="nav-item"><%= current_user.name %></li>
+        <li class="navbar-brand"><%= current_user.name.capitalize %></li> 
+        <li class="nav-item"><%= link_to 'Manage Listings', seller_path, class: 'nav-link' %></li>
         <li class="nav-item"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link'%></li>
         <li class="nav-item"><%= link_to 'Edit Profile', edit_user_registration_path, class: 'nav-link'%></li>
       <% else %>

@@ -12,12 +12,6 @@
           <p><%= "Sold by #{listing.user.name}" %></p>
           <p class="card-text"><%= listing.description %></p>
         </div>
-          <% if (user_signed_in?) && (current_user == listing.user) %>
-          <div class="card-footer">
-            <%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %>
-            <%= link_to 'Destroy', listing, class: "btn btn-link", method: :delete, data: { confirm: 'Are you sure?' } %>
-          </div>
-          <% end %>
       </div>
     <% end %>
   </div>
