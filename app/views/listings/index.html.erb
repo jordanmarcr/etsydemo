@@ -8,6 +8,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= listing.name %></h5>
           <p class="card-text"><%= number_to_currency(listing.price) %></p>
+          <p><%= "Sold by #{listing.user.name}" %></p>
           <p class="card-text"><%= listing.description %></p>
         </div>
         <div class="card-footer">
