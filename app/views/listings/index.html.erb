@@ -7,7 +7,7 @@
   <div class="card-deck">
     <% @listings.each do |listing| %>
       <div class="card">
-        <%= link_to image_tag(listing.image, class: 'card-img-top'), listing%>
+        <%= link_to (image_tag(listing.image, class: 'card-img-top') unless listing.image.nil?), listing%>
 
         <div class="card-body">
           <h5 class="card-title"><%= listing.name %></h5>
