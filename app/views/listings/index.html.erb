@@ -4,7 +4,8 @@
   <div class="card-deck">
     <% @listings.each do |listing| %>
       <div class="card">
-        <%= image_tag listing.image.url, class: 'card-img-top' %>
+        <%= link_to image_tag(listing.image.url, class: 'card-img-top'), listing%>
+
         <div class="card-body">
           <h5 class="card-title"><%= listing.name %></h5>
           <p class="card-text"><%= number_to_currency(listing.price) %></p>
@@ -12,16 +13,18 @@
           <p class="card-text"><%= listing.description %></p>
         </div>
         <div class="card-footer">
-          <%= link_to 'Show', listing, class: "btn btn-link" %>
-          <%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %>
-          <%= link_to 'Destroy', listing, class: "btn btn-link", method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% if (user_signed_in?) && (current_user == listing.user) %>
+            <%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %>
+            <%= link_to 'Destroy', listing, class: "btn btn-link", method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
         </div>
       </div>
     <% end %>
   </div>
 </div>
 
-
 <br>
 
+<% if user_signed_in? %>
 <%= link_to 'New Listing', new_listing_path, class: "btn btn-link" %>
+<% end %>
