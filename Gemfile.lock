@@ -49,8 +49,6 @@ GEM
     arel (9.0.0)
     aws-eventstream (1.0.2)
     aws-partitions (1.148.0)
-    aws-sdk (1.61.0)
-      aws-sdk-v1 (= 1.61.0)
     aws-sdk-core (3.48.3)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
@@ -63,9 +61,6 @@ GEM
       aws-sdk-core (~> 3, >= 3.48.2)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
-    aws-sdk-v1 (1.61.0)
-      json (~> 1.4)
-      nokogiri (>= 1.4.4)
     aws-sigv4 (1.1.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
     bcrypt (3.1.12)
@@ -117,7 +112,6 @@ GEM
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     jmespath (1.4.0)
-    json (1.8.6)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -238,7 +232,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk (~> 1.61.0)
   aws-sdk-s3
   bootsnap (>= 1.1.0)
   byebug
