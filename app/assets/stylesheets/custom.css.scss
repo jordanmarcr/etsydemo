@@ -41,3 +41,15 @@ body {
     font-size: 18px;
   }
 }
+
+.navbar{
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  background-image: url('jumbotron.jpeg');
+  h1, h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+  }
+}
